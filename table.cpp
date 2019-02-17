@@ -241,6 +241,9 @@ Table::~Table() {
 }
 
 Table& Table::operator=(const Table& input) {
+	if (p1 == input.returnbuck(0)) {
+		return (*this);
+	}
 	this->~Table();
 	int size;
 	size = input.returnsize();
